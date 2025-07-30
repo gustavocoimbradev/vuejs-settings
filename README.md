@@ -1,39 +1,43 @@
-# vuejs-settings
+<img height="100" alt="vue-settings-app" src="https://github.com/user-attachments/assets/f885072f-4aff-4e8b-9e16-9e9fd077fa2a.png" />
 
-This template should help get you started developing with Vue 3 in Vite.
+## About the project
 
-## Recommended IDE Setup
+This is a Vue.js settings panel with multiple tabs (General, Notifications, Privacy). It was created for learning and portfolio purposes, focusing on composition API, state management with composables, and basic UI feedback.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+#### Features
 
-## Type Support for `.vue` Imports in TS
+- Tab navigation between sections  
+- Update and save general settings  
+- Configure notification preferences  
+- Manage privacy options  
+- Basic visual feedback on save actions  
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+#### Technologies
 
-## Customize configuration
+- Vue 3 + Vite  
+- Tailwind CSS  
+- TypeScript  
+- Composition API  
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Main Files
 
-## Project Setup
+#### Components
 
-```sh
-npm install
-```
+- [`GeneralSettings.vue`](src/components/GeneralSettings.vue) – User info form  
+- [`NotificationsSettings.vue`](src/components/NotificationsSettings.vue) – Notification preferences  
+- [`PrivacySettings.vue`](src/components/PrivacySettings.vue) – Privacy settings section  
+- [`NotificationList.vue`](src/components/NotificationList.vue) – Reusable checkbox list  
+- [`TabLink.vue`](src/components/TabLink.vue) – Tab navigation link  
+- [`App.vue`](src/App.vue) – Root component with tab logic  
 
-### Compile and Hot-Reload for Development
+#### Composables
 
-```sh
-npm run dev
-```
+- [`useSettings.ts`](src/composables/useSettings.ts) – Reactive general/notification/privacy data  
+- [`useNotifications.ts`](src/composables/useNotifications.ts) – Handle toast/feedback logic  
 
-### Type-Check, Compile and Minify for Production
+#### Core
 
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+- [`main.ts`](src/main.ts) – App entry point  
+- [`vite.config.ts`](vite.config.ts) – Vite configuration  
+- [`types.ts`](src/types.ts) – Types for settings  
+- [`index.html`](index.html) – Main HTML file  

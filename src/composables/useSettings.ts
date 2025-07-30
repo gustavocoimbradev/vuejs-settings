@@ -18,8 +18,8 @@ const init = <T>(key: string, defaults: T) => {
 
 const general = ref<GeneralSettings>(
     init<GeneralSettings>('general', {
-        about: 'TESTE',
-        country: 'USA',
+        about: '',
+        country: '',
         gender: 'male',
         email: '',
         username: ''
